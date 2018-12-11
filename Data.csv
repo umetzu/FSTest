@@ -1,0 +1,18 @@
+﻿TXN_DATE,TXN_TYPE,TXN_SHARES,TXN_PRICE,FUND,INVESTOR,SALES_REP
+1/2/18,BUY,50.0000,$9.38 ,STOCK FUND,"John Doe & Assoc.
+A Professional Corporation",John Q. Public
+1/2/18,BUY,50.5561,$9.89 ,BOND FUND,"John Doe & Assoc.
+A Professional Corporation",John Q. Public
+1/2/18,BUY,151.6684,$9.89 ,BOND FUND,"John Doe, Jane Doe JTOWROS",John Q. Public
+1/2/18,BUY,533.0490,$9.38 ,STOCK FUND,Joe Smith,"Daryl ""Moose"" Johnston"
+1/15/18,BUY,529.1005,$9.45 ,STOCK FUND,Joe Smith,"Daryl ""Moose"" Johnston"
+1/31/18,SELL,47.4383,$10.54 ,BOND FUND,"John Doe, Jane Doe JTOWROS",John Q. Public
+2/28/18,SELL,44.8330,$11.14 ,BOND FUND,"John Doe, Jane Doe JTOWROS",John Q. Public
+3/30/18,SELL,59.3467,$12.03 ,BOND FUND,"John Doe, Jane Doe JTOWROS",John Q. Public
+4/1/18,BUY,41.5628,$12.03 ,BOND FUND,"John Doe & Assoc.
+A Professional Corporation",John Q. Public
+4/1/18,BUY,50.0000,$9.34 ,STOCK FUND,"John Doe & Assoc.
+A Professional Corporation",John Q. Public
+4/1/18,SELL,1602.1495,$9.34 ,STOCK FUND,Joe Smith,"Daryl ""Moose"" Johnston"
+4/17/18,SELL,92.1189,$10.17 ,BOND FUND,"John Doe & Assoc.
+A Professional Corporation",John Q. Public
