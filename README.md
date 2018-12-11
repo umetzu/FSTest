@@ -3,15 +3,6 @@
 
 Summary: Write code to consume data in a CSV file, and generate reports.
 
-You may use any language, libraries or tools you want, as long as you will be
-able to demonstrate your solution in person. Code that you can email to the
-interviewers ahead of time usually works best, but other means of
-demonstration, such as a laptop with the necessary tools loaded, would be fine
-as well.
-
-(Please confirm that we've received your code submission, since our email
- gateway will often remove attachments. We've found a public GitHub repository
- to be the safest bet.)
 
 Input Specification: CSV file. First line is a header. Columns are:
     TXN_DATE - date transaction took place
@@ -40,18 +31,3 @@ Output Specification:
 
     4. Investor Profit:
         For each Investor and Fund, return net profit or loss on investment.
-
-Be prepared to discuss:
-
-    Testing strategies
-    Difficulties you had and how you solved them
-
-Suggestion:
-
-    Your code should be correct first, have good style and comments second, and
-    then be clever/fast as a distant third.
-
-Who to contact when you have questions:
-
-    Andrew Barnett <andrew.barnett@fsinvestments.com>
-    Jason Stelzer <jason.stelzer@fsinvestments.com>
