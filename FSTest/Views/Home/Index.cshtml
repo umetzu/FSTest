@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<h3>Transaction file selection</h3>
+
+<!-- Form will be used by dropzone.js to generate a dropzone control -->
+@using (Html.BeginForm("CSVUpload", "Home", FormMethod.Post, new { @class = "dropzone", id = "home-dropzone", enctype = "multipart/form-data" }))
+{
+
+}
+
+<script>
+    //Variables to be used by dropzone control
+    var fileName = '@(ViewBag.FileName)';
+    var fileSize = '@(ViewBag.FileSize)';
+</script>

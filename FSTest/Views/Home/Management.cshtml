@@ -1,0 +1,53 @@
+﻿@model IEnumerable<FSTest.ViewModels.ManagementViewModel>
+@{
+    ViewBag.Title = "Assets Under Management Summary";
+}
+<br />
+<div>
+    @if (Model != null)
+    {
+    <div class="form-horizontal">
+        @foreach (var item in Model)
+        {
+        <div class="row">
+            @Html.LabelFor(x => item.SalesRepName, new { @class = "col-sm-2 control-label" })
+            <p class="col-sm-10 form-control-static">@item.SalesRepName</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-2">
+            @if (item.Details.Count() > 0)
+            {
+                <table class="table">
+                    <thead>
+                    <th class="col-xs-6">
+                        @Html.LabelFor(x => item.Details.First().InvestorName)
+                    </th>
+                    <th>
+                        @Html.LabelFor(x => item.Details.First().TotalAmount)
+                    </th>
+                    </thead>
+                    <tbody>
+                    @foreach (var detail in item.Details)
+                    {
+                        <tr>
+                            <td>
+                                @detail.InvestorName
+                            </td>
+                            <td>
+                                @detail.TotalAmount
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            }
+            </div>
+        </div>
+        }
+    </div>
+    }
+    else
+    {
+    <p>No file selected.</p>
+    }
+</div>  

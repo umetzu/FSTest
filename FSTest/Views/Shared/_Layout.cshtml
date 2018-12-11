@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - FSTest</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/basic.min.css" />
+
+    <link rel="stylesheet" href="~/Content/css/site.css" />
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("FSTest", "Index", "Home", null, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Sales" ? "active" : "")">@Html.ActionLink("Sales Summary", "Sales", "Home")</li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Management" ? "active" : "")">@Html.ActionLink("Assets Under Management Summary", "Management", "Home")</li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Break" ? "active" : "")">@Html.ActionLink("Break Report", "Break", "Home")</li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Investor" ? "active" : "")">@Html.ActionLink("Investor Profit", "Investor", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
+
+    <script src="~/Content/js/site.js" asp-append-version="true"></script>
+
+<script>
+    // Valid url for Sales action in Home controller
+    var urlSales = '@Url.Action("Sales", "Home")';
+</script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿@model IEnumerable<FSTest.ViewModels.BreakViewModel>
+@{
+    ViewBag.Title = "Privacy Policy";
+}
+<br/>
+<div>
+    @if (Model != null)
+    {
+        <table class="table">
+            <thead>
+            <th>@Html.DisplayNameFor(x => x.InvestorName)</th>
+            <th>@Html.DisplayNameFor(x => x.NetCashBalance)</th>
+            <th>@Html.DisplayNameFor(x => x.NetShareBalance)</th>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @item.InvestorName
+                        </td>
+                        <td>
+                            @item.NetCashBalance
+                        </td>
+                        <td>
+                            @item.NetShareBalance
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No file selected.</p>
+    }
+</div>  

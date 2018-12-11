@@ -1,0 +1,45 @@
+﻿@model IEnumerable<FSTest.ViewModels.SalesViewModel>
+@{
+    ViewBag.Title = "Sales Summary";
+}
+<br/>
+<div>
+    @if (Model != null)
+    {
+    <table class="table">
+        <thead>
+        <th>@Html.DisplayNameFor(x => x.SalesRepName)</th>
+        <th>@Html.DisplayNameFor(x => x.YearToDate)</th>
+        <th>@Html.DisplayNameFor(x => x.QuarterToDate)</th>
+        <th>@Html.DisplayNameFor(x => x.MonthToDate)</th>
+        <th>@Html.DisplayNameFor(x => x.InceptionToDate)</th>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @item.SalesRepName
+                </td>
+                <td>
+                    @item.YearToDate
+                </td>
+                <td>
+                    @item.QuarterToDate
+                </td>
+                <td>
+                    @item.MonthToDate
+                </td>
+                <td>
+                    @item.InceptionToDate
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    }
+    else
+    {
+        <p>No file selected.</p>
+    }
+</div>  
